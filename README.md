@@ -1,7 +1,7 @@
 # yuddack.gg_front
 yuddack.gg project frontend
 
-# 9. 커밋 컨벤션
+# 커밋
 ## 기본 구조
 ```
 type : subject
@@ -20,3 +20,20 @@ refactor : 코드 리펙토링
 ```
 
 <br/>
+
+## 커밋 예시
+```
+feat: "회원 가입 기능 구현"
+fix : "동작시 pending 에러 수정"
+```
+
+<br/>
+
+# 이슈
+## 깃이슈 사용
+```
+테스트시 발견한 에러사항 기록하기
+```
+
+<br/>
+
