@@ -1,6 +1,14 @@
 # yuddack.gg_front
 yuddack.gg project frontend
 
+<br />
+
+# 대표색
+
+배경색 : F9FAFB
+
+<br />
+
 # 커밋
 ## 기본 구조
 ```

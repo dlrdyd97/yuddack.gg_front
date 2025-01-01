@@ -1,0 +1,64 @@
+.result-item {
+    width: 50rem;
+}
+
+.result-item-container {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .result-avatar {
+    flex: 0 0 50px;
+    margin-right: 10px;
+  }
+  
+  .avatar-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .result-info {
+    flex: 1;
+    margin-right: 10px;
+  }
+  
+  .item-description {
+    margin: 0;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .item-tag {
+    font-size: 12px;
+    color: red;
+  }
+  
+  .result-dropdown {
+    flex: 0 0 80px;
+    margin-right: 10px;
+  }
+  
+  .dropdown-select {
+    width: 100%;
+    padding: 5px;
+    font-size: 14px;
+  }
+  
+  .result-details {
+    text-align: right;
+  }
+  
+  .item-price {
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  .seller-info {
+    font-size: 12px;
+    color: #555;
+  }
