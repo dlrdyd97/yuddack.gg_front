@@ -1,13 +1,19 @@
 .result-item {
-    width: 50rem;
+    display: flex;
+    width: 1000px;
+    justify-content: center;
 }
 
 .result-item-container {
     width: 80%;
+    height: 2.5rem;
     display: flex;
     align-items: center;
     padding: 10px;
     font-family: Arial, sans-serif;
+    border: #A3A5A9 1px solid;
+    border-radius: 20px;
+    background: white;
   }
   
   .result-avatar {
@@ -16,8 +22,8 @@
   }
   
   .avatar-img {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     object-fit: cover;
   }
@@ -56,9 +62,11 @@
   .item-price {
     font-size: 14px;
     font-weight: bold;
+    margin: 0;
   }
   
   .seller-info {
     font-size: 12px;
     color: #555;
+    margin: 0;
   }
