@@ -4,7 +4,7 @@ import "../../styles/components/profile/Profile.css";
 const MyProfile = () => {
   return (
     <>
-      <div className="profile-container">This is a profile message!</div>
+      <div className="profile-container">프로필 컴포넌트</div>
     </>
   );
 };
