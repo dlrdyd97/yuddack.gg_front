@@ -10,7 +10,15 @@ function Result() {
           <div className="ex-search-bar">
             검색창 자리
           </div>
-        <ResultItem/>
+
+          <div className="result-list">
+            <ResultItem/>
+            <ResultItem/>
+            <ResultItem/>
+            <ResultItem/>
+            <ResultItem/>
+          </div>
+        
           <div className="ex-footer">
             푸터자리
           </div>

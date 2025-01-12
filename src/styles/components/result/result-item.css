@@ -2,6 +2,7 @@
     display: flex;
     width: 1000px;
     justify-content: center;
+    margin-bottom: 5px;
 }
 
 .result-item-container {
@@ -15,6 +16,14 @@
     border-radius: 20px;
     background: white;
   }
+
+  .result-list {
+    width: 100%;
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   
   .result-avatar {
     flex: 0 0 50px;
@@ -25,6 +34,7 @@
     width: 40px;
     height: 40px;
     border-radius: 50%;
+    border: #A3A5A9 1px solid;
     object-fit: cover;
   }
   
