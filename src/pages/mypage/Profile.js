@@ -1,14 +1,17 @@
 import MyProfile from "./MyProfile";
+import "../../styles/components/profile/Profile.css";
+import { useEffect, useState } from "react";
 
 function Profile() {
+  const [username, setUsername] = useState("내래못난호랭이라는뜻이다");
+  const [userPfp, setUserPfp] = useState(
+    `${process.env.PUBLIC_URL}/images/WildSoul.png`
+  );
+
   return (
     <>
       <div className="profileMain">
-        <div className="profile-div">
-          <div className="profile-image">
-            <MyProfile />
-          </div>
-        </div>
+        <MyProfile name={username} userPfp={userPfp} />
       </div>
     </>
   );
