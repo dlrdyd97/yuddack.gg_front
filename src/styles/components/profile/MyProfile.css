@@ -1,0 +1,153 @@
+.myprofile-container {
+    position: relative;
+    /* background-color: #f9f9f9;  */
+    background-color: #E6E6E6; /* 배경색 */
+    width: 530px;
+    height: 160px;
+    border: 2px solid #b8b6b6;   /* 테두리 */
+    border-radius: 15px;       /* 모서리를 둥글게 */
+    text-align: center;       /* 글자 가운데 정렬 */    
+    box-shadow: 2px 2px 8px #b8b6b6; /* 그림자 */
+    margin: 0 auto;           /* 화면 가운데 정렬 */
+  }
+  
+  /* 프로필 헤더 */
+  .myprofile-head{
+    margin: 0 auto;
+    padding-top: 15px;
+    font-size: 15px;          /* 글자 크기 */
+  }
+  
+  .myprofile-image-container{
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 130px;
+    height: 130px;
+    border-radius: 15px;
+  
+    display: flex;
+    justify-content: center;  /* 가로 중앙 */
+    align-items: center;      /* 세로 중앙 */
+  }
+  
+  .myprofile-img{
+    border: 1px solid #b8b6b6;
+    border-radius: 15px;
+    width: 100%;  /* 부모 div의 크기에 맞게 이미지 크기 설정 */
+    height: 100%; /* 부모 div의 크기에 맞게 이미지 크기 설정 */
+    object-fit: cover;  /* 이미지가 영역을 벗어나지 않도록 비율에 맞게 잘림 */
+  }
+  
+  .myprofile-logout {
+    display: inline-block;
+    position: absolute;
+    right: 15px;
+    top: 9px;
+    padding: 7px 17px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #ff4b5c;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .myprofile-logout:hover {
+    background-color: #e03d4d;
+    transform: scale(1.05);
+  }
+  
+  .myprofile-logout:active {
+    background-color: #c03440;
+    transform: scale(0.98);
+  }
+  
+  .myprofile-logout:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 75, 92, 0.5);
+  }
+  
+  
+  /* 프로필 메인 */
+  .myprofile-main{
+    width: 230px;
+    text-align: left;
+    margin: 0 auto;
+  }
+  
+  .myprofile-username-box{
+    display: flex;
+    
+  }
+  
+  .myprofile-username{
+    margin-left: 6px;
+    font-weight: bold;
+   }
+   
+   .myprofile-username-copy{
+     margin-left: 5px;
+     margin-top: 1px;
+     cursor: pointer;
+   }
+   
+   /* 닉네임 복사 성공 알림 */
+   .copy-alert {
+     position: fixed;
+     bottom: 20px; /* 페이지 하단에 위치 */
+     right: 20px;  /* 페이지 우측에 위치 */
+     background-color: #28a745; /* 성공적인 알림 색상 */
+     color: white;
+     padding: 10px 80px;
+     border-radius: 5px;
+     font-size: 16px;
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+     animation: fadeInOut 3s ease-in-out;
+   }
+   
+   /* 애니메이션: 알림이 나타나고 사라짐 */
+   @keyframes fadeInOut {
+     0% {
+       opacity: 0;
+       transform: translateY(20px);
+     }
+     10% {
+       opacity: 1;
+       transform: translateY(0);
+     }
+     90% {
+       opacity: 1;
+       transform: translateY(0);
+     }
+     100% {
+       opacity: 0;
+       transform: translateY(20px);
+     }
+   }
+  
+   .myprofile-content{
+    margin-top: 14px;
+    margin-left: 8px;
+    font-size: 14px;
+    font-weight: 400;
+   }
+   .myprofile-trade{
+    color: blue;
+   }
+  
+   .myprofile-report{
+    color: red;
+   }
+  
+   .myprofile-content-front{
+    display: inline-block;
+    width: 70px;
+    /* background-color: lightgrey; */
+   }
+  

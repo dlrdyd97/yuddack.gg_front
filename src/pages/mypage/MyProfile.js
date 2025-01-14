@@ -1,13 +1,13 @@
-import React, { useEffect, useState } from "react";
-import "../../styles/components/profile/Profile.css";
+import React, { useState } from "react";
+import "../../styles/components/profile/MyProfile.css";
 import { FaCopy } from "react-icons/fa";
 
-const MyProfile = ({ name, userPfp }) => {
+const MyProfile = ({ userInfo, setUserInfo }) => {
   const [showAlert, setShowAlert] = useState(false);
 
   const nameCopy = () => {
     navigator.clipboard
-      .writeText(name)
+      .writeText(userInfo.name)
       .then(() => {
         setShowAlert(true); // 복사 성공 시 알림 표시
         setTimeout(() => {
@@ -25,16 +25,20 @@ const MyProfile = ({ name, userPfp }) => {
 
   return (
     <>
-      <div className="profile-container">
+      <div className="myprofile-container">
         {/* 프로필 헤더 */}
-        <div className="profile-head">
+        <div className="myprofile-head">
           {/* 프로필사진 */}
-          <div className="profile-image-container">
-            <img src={userPfp} alt="Profile" className="profile-img" />
+          <div className="myprofile-image-container">
+            <img
+              src={userInfo.profile_picture}
+              alt="Profile"
+              className="myprofile-img"
+            />
           </div>
           {/* 로그아웃 버튼 */}
           <div
-            className="profile-logout"
+            className="myprofile-logout"
             onClick={() => {
               logOut();
             }}
@@ -43,13 +47,13 @@ const MyProfile = ({ name, userPfp }) => {
           </div>
         </div>
         {/* 프로필 메인 */}
-        <div className="profile-main">
-          <div className="profile-username-box">
+        <div className="myprofile-main">
+          <div className="myprofile-username-box">
             {/* 닉네임 */}
-            <div className="profile-username">{name}</div>
+            <div className="myprofile-username">{userInfo.name}</div>
             {/* 닉네임 복사 */}
             <div
-              className="profile-username-copy"
+              className="myprofile-username-copy"
               onClick={() => {
                 nameCopy();
               }}
@@ -57,12 +61,27 @@ const MyProfile = ({ name, userPfp }) => {
               <FaCopy size={20} />
             </div>
           </div>
-          <div className="profile-content">
-            <div>계정 생성일 : 2025-01-13</div>
-            <div>거래 횟수 : 10회</div>
-            <div>신고당한 횟수 : 0회</div>
-            <div>구매글 : 3건</div>
-            <div>판매글 : 7건</div>
+          <div className="myprofile-content">
+            <div className="myprofile-trade">
+              <span className="myprofile-content-front">거래 횟수</span>
+              <span>: &nbsp;&nbsp;{userInfo.trade_count} 회</span>
+            </div>
+            <div className="myprofile-report">
+              <span className="myprofile-content-front">신고 횟수</span>
+              <span>: &nbsp;&nbsp;{userInfo.report_count} 회</span>
+            </div>
+            <div>
+              <span className="myprofile-content-front">구매글</span>
+              <span>: &nbsp;&nbsp;{userInfo.purchase_posts} 건</span>
+            </div>
+            <div>
+              <span className="myprofile-content-front">판매글</span>
+              <span>: &nbsp;&nbsp;{userInfo.sale_posts} 건</span>
+            </div>
+            <div>
+              <span className="myprofile-content-front">가입일</span>
+              <span>: &nbsp;&nbsp;{userInfo.join}</span>
+            </div>
           </div>
         </div>
       </div>
