@@ -7,7 +7,7 @@
 
 .profile-post-box{
   display: flex;
-  flex-direction: column; /* 세로로 배치 */
+  justify-content: space-between; /* 좌우 배치 */
   width: 805px;
   padding: 7px;
   border-radius: 5px;
@@ -16,9 +16,8 @@
   background-color: #E6E6E6;
 }
 
-.profile-post-head {
-  display: flex;
-  justify-content: space-between; /* 좌우 배치 */
+.profile-trade-box{
+  text-align: center;
 }
 
 .profile-purchase{
@@ -31,7 +30,6 @@
   border-radius: 5px;
   background-color: #B2DFDB; /* 파스텔 민트 */
   font-weight: 600;
-  margin-right: 10px;
 }
 
 .profile-sale{
@@ -44,5 +42,33 @@
   border-radius: 5px;
   background-color: #FFCDD2; /* 파스텔 핑크 */
   font-weight: 600;
-  margin-left: 10px;
+}
+
+.scroll-box {
+  width: 390px;         /* Box width */
+  min-height: 20px;
+  max-height: 230px;        /* Box height */
+
+  overflow-y: scroll;     /* Vertical scroll */
+  overflow-x: hidden;   /* Hide horizontal scroll */
+  background-color: #D8D8D8; /* Background color */
+  border-radius: 5px;
+}
+
+.scroll-box::-webkit-scrollbar {
+  width: 8px;          /* Scrollbar width */
+}
+
+.scroll-box::-webkit-scrollbar-thumb {
+  background: #6E6E6E;    /* Scrollbar thumb color */
+  border-radius: 2px; /* Rounded scrollbar */
+}
+
+.scroll-box::-webkit-scrollbar-thumb:hover {
+  background: #555;    /* Thumb hover color */
+}
+
+.scroll-box::-webkit-scrollbar-track {
+  background: #A4A4A4; /* Scrollbar track (background) color */
+  border-radius: 2px;  /* Rounded track */
 }
