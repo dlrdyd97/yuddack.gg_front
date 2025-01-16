@@ -1,7 +1,11 @@
 import React from "react";
 
-const SaleBox = ({ userInfo }) => {
-  return <div className="profile-sale">딱지 팜 ( {userInfo.sale_posts} )</div>;
+const SaleBox = ({ userInfo, title, count }) => {
+  return (
+    <div className="profile-sale">
+      {title} ( {count} )
+    </div>
+  );
 };
 
 export default SaleBox;

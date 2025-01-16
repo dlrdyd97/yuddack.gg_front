@@ -1,9 +1,9 @@
 import React from "react";
 
-const PurchaseBox = ({ userInfo }) => {
+const PurchaseBox = ({ userInfo, title, count }) => {
   return (
     <div className="profile-purchase">
-      딱지 삼 ( {userInfo.purchase_posts} )
+      {title} ( {count} )
     </div>
   );
 };
