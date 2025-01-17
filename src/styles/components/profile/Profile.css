@@ -6,14 +6,23 @@
 }
 
 .profile-post-box{
+  /* display: flex;
+  justify-content: space-between; 좌우 배치 */
   display: flex;
-  justify-content: space-between; /* 좌우 배치 */
+  flex-wrap: wrap; /* 줄 바꿈 허용 */
+  justify-content: space-between; /* 좌우 배치 유지 */
   width: 805px;
   padding: 7px;
   border-radius: 5px;
   margin: 0 auto;
-  margin-top: 50px;
+  margin-top: 30px;
   background-color: #E6E6E6;
+}
+
+.profile-bring-up {
+  flex-basis: 100%; /* 한 줄 전체 너비 차지 */
+  order: 0; /* 다른 요소보다 위로 배치 */
+  margin-bottom: 10px; /* 아래 간격 추가 */
 }
 
 .profile-trade-box{

@@ -5,6 +5,7 @@ import MyTrade from "./MyTrade";
 import PurchaseBox from "./PurchaseBox";
 import SaleBox from "./SaleBox";
 import GetUserInfo from "./GetUserInfo";
+import BringUp from "./BringUp";
 
 function Profile() {
   const [userInfo, setUserInfo] = useState(GetUserInfo);
@@ -13,8 +14,13 @@ function Profile() {
     <>
       <div className="profile-main">
         <MyProfile userInfo={userInfo} setUserInfo={setUserInfo} />
+
         {/* 구매 , 판매중인 딱지 리스트 */}
         <div className="profile-post-box">
+          {/* 끌어올리기 */}
+          <div className="profile-bring-up">
+            <BringUp />
+          </div>
           <div className="profile-trade-box">
             <PurchaseBox
               userInfo={userInfo}
