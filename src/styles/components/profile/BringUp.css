@@ -14,3 +14,70 @@
 .bring-up:hover {
     background-color: #585858; /* 호버 시 배경색 변경 */
 }
+
+/* 끌어올림 성공 알림 */
+.bring-completed-alert {
+    position: fixed;
+    bottom: 20px; /* 페이지 하단에 위치 */
+    right: 20px;  /* 페이지 우측에 위치 */
+    background-color: #28a745; /* 성공적인 알림 색상 */
+    color: white;
+    padding: 10px 80px;
+    border-radius: 5px;
+    font-size: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeInOut 3s ease-in-out;
+  }
+  
+  /* 애니메이션: 알림이 나타나고 사라짐 */
+  @keyframes fadeInOut {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    10% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    90% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+  }
+
+  .bring-fail-alert{
+    position: fixed;
+    bottom: 20px; /* 페이지 하단에 위치 */
+    right: 20px;  /* 페이지 우측에 위치 */
+    background-color: #e74c3c; /* 실패 알림 색상 */
+    color: white;
+    padding: 10px 80px;
+    border-radius: 5px;
+    font-size: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeInOut 3s ease-in-out;
+  }
+  
+  /* 애니메이션: 알림이 나타나고 사라짐 */
+  @keyframes fadeInOut {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    10% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    90% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+  }

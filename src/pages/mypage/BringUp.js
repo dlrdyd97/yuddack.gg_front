@@ -13,13 +13,13 @@ const BringUp = () => {
       setShowAlert(1); // 끌어올리기 성공 표시
       setTimeout(() => {
         setShowAlert(0); // 3초 후 알림 숨기기
-      }, 3000);
+      }, 2900);
     } else {
       // 취소 or 쿨타임 1시간이 안되면 로직 추가해야함
       setShowAlert(2); // 끌어올리기 실패 표시
       setTimeout(() => {
         setShowAlert(0); // 3초 후 알림 숨기기
-      }, 3000);
+      }, 2900);
     }
   };
 
@@ -36,12 +36,12 @@ const BringUp = () => {
       </div>
       {/* 복사 성공 알림 */}
       {showAlert === 1 && (
-        <div className="copy-alert">
+        <div className="bring-completed-alert">
           <span>끌어올림 성공</span>
         </div>
       )}
       {showAlert === 2 && (
-        <div className="copy-alert">
+        <div className="bring-fail-alert">
           <span>끌어올림 실패</span>
         </div>
       )}

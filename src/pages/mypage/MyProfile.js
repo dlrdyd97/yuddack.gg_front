@@ -12,7 +12,7 @@ const MyProfile = ({ userInfo, setUserInfo }) => {
         setShowAlert(true); // 복사 성공 시 알림 표시
         setTimeout(() => {
           setShowAlert(false); // 3초 후 알림 숨기기
-        }, 3000);
+        }, 2900);
       })
       .catch((err) => {
         alert("복사 실패", err);
