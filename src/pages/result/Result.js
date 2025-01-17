@@ -1,3 +1,4 @@
+import ResultFiltering from "../../components/result/ResultFiltering";
 import ResultItem from "../../components/result/ResultItem";
 function Result() {
     return (
@@ -11,6 +12,10 @@ function Result() {
           </div>
 
           <div className="result-list">
+            <div>
+              <h1>검색결과</h1>
+              <ResultFiltering/>
+            </div>
             <ResultItem/>
             <ResultItem/>
             <ResultItem/>
