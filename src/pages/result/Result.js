@@ -12,10 +12,10 @@ function Result() {
           </div>
 
           <div className="result-list">
-            <div>
-              <h1>검색결과</h1>
+            <div className="result-header">
               <ResultFiltering/>
             </div>
+
             <ResultItem/>
             <ResultItem/>
             <ResultItem/>

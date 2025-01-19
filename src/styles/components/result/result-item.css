@@ -85,14 +85,36 @@
     display: flex;
     justify-content: center;
     margin-bottom: 10px;
+    border: #A3A5A9 1px solid;
+    border-radius: 20px;
+    background: white;
+    height: 25px;
   }
 
-  .result-filtering-each {
+  .result-filtering-each, .result-filtering-deck {
     display: flex;
     margin: 0 10px;
+    align-items: center;
   }
 
-  .result-filtering-each  p {
+  .result-filtering-each  p, .result-filtering-deck p {
     margin: 0;
     font-size: 14px;
+  }
+
+  .result-header {
+    display: flex;
+        width: 820px;
+        justify-content: center;
+        flex-direction: column;
+        align-items: flex-end;
+  }
+
+  .result-rare-select {
+    font-size: 14px;
+  }
+
+  .result-filtering-input {
+    width: 30px;
+    border: #A3A5A9 1px solid;
   }
