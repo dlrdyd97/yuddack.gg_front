@@ -64,6 +64,23 @@ const GetUserInfo = {
       trade_type: "sale",
       status: "in_progress",
       rarity: "",
+      deck_list: [
+        {
+          id: 1,
+          card_name: "증식의 G",
+          rarity: "rare",
+        },
+        {
+          id: 2,
+          card_name: "증식의 G",
+          rarity: "normal",
+        },
+        {
+          id: 3,
+          card_name: "증식의 G",
+          rarity: "ultra",
+        },
+      ],
     },
     {
       id: 6,
