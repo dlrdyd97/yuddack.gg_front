@@ -7,7 +7,7 @@ import SaleBox from "./SaleBox";
 import GetUserInfo from "./GetUserInfo";
 import BringUp from "./BringUp";
 
-function Profile() {
+const Profile = () => {
   const [userInfo, setUserInfo] = useState(GetUserInfo);
 
   return (
@@ -15,7 +15,7 @@ function Profile() {
       <div className="profile-main">
         <MyProfile userInfo={userInfo} setUserInfo={setUserInfo} />
 
-        {/* 구매 , 판매중인 딱지 리스트 */}
+        {/* 구매중인 딱지 리스트 */}
         <div className="profile-post-box">
           {/* 끌어올리기 */}
           <div className="profile-bring-up">
@@ -44,6 +44,7 @@ function Profile() {
                 ))}
             </div>
           </div>
+          {/* 판매중인 딱지 리스트 */}
           <div className="profile-trade-box">
             <SaleBox
               userInfo={userInfo}
@@ -51,12 +52,31 @@ function Profile() {
               count={userInfo.sale_posts}
             />
             <div className="scroll-box">
+              {/* 낱장 판매중 */}
+              {userInfo.trade.filter(
+                (tradeItem) =>
+                  tradeItem.trade_type === "sale" &&
+                  tradeItem.option === "single" &&
+                  tradeItem.status === "in_progress"
+              ).length !== 0 ? ( // 판매중인 낱장 카드가 있으면
+                <>
+                  <MyTrade
+                    trade={"single"}
+                    userInfo={userInfo}
+                    setUserInfo={setUserInfo}
+                  />
+                </>
+              ) : (
+                <></>
+              )}
+              {/* 덱 판매중 */}
               {userInfo.trade
                 .filter(
                   (tradeItem) =>
-                    tradeItem.trade_type === "sale" &&
-                    tradeItem.status === "in_progress"
-                ) // "sale"인 항목 + "in_progress" 필터링
+                    tradeItem.trade_type === "sale" && // 판매
+                    tradeItem.status === "in_progress" && // 판매중
+                    tradeItem.option !== "single" // 낱장이 아닌 판매카드  ( 낱장,묶어팔기는 상단 고정 )
+                )
                 .map((tradeItem) => (
                   <MyTrade
                     key={tradeItem.id}
@@ -120,6 +140,6 @@ function Profile() {
       </div>
     </>
   );
-}
+};
 
 export default Profile;

@@ -11,21 +11,32 @@ const GetUserInfo = {
   profile_picture: `${process.env.PUBLIC_URL}/images/WildSoul.png`,
 
   trade: [
+    // id: pk
+    // title: 덱 판매 제목 or 낱장 카드명
+    // content: 덱판매 글 내용
+    // optiong: 'deck' or 'single'
+    // trade_type: 'purchase' or 'sale'
+    // status: 'in_progress' or 'completed'
+    // rarity: 'anything' or 'normal' or 'normal_rare' or 'super_rare' or 'ultra_rare' or
+    //         'ultimate_rare' or 'secret_rare' or 'holographic_rare' or ...
+    //
     {
       id: 1,
-      title: "증식의 쥐 , 하루우라라 삽니다.",
+      title: "증식의 G",
       content: "",
       option: "single",
       trade_type: "purchase",
       status: "in_progress",
+      rarity: "anything",
     },
     {
       id: 2,
-      title: "텐 사우전드 드래곤 삽니다.",
+      title: "텐 사우전드 드래곤",
       content: "",
       option: "single",
       trade_type: "purchase",
       status: "in_progress",
+      rarity: "",
     },
     {
       id: 3,
@@ -34,14 +45,16 @@ const GetUserInfo = {
       option: "deck",
       trade_type: "purchase",
       status: "in_progress",
+      rarity: "",
     },
     {
       id: 4,
-      title: "스타더스트 드래곤 삽니다.",
+      title: "스타더스트 드래곤",
       content: "",
       option: "single",
       trade_type: "purchase",
       status: "in_progress",
+      rarity: "",
     },
     {
       id: 5,
@@ -50,6 +63,7 @@ const GetUserInfo = {
       option: "deck",
       trade_type: "sale",
       status: "in_progress",
+      rarity: "",
     },
     {
       id: 6,
@@ -58,6 +72,7 @@ const GetUserInfo = {
       option: "deck",
       trade_type: "sale",
       status: "in_progress",
+      rarity: "",
     },
     {
       id: 7,
@@ -66,14 +81,16 @@ const GetUserInfo = {
       option: "deck",
       trade_type: "purchase",
       status: "completed",
+      rarity: "",
     },
     {
       id: 8,
-      title: "해피의깃털 , 욕망의 항아리 삽니다.",
+      title: "욕망의 항아리",
       content: "",
       option: "single",
       trade_type: "purchase",
       status: "completed",
+      rarity: "",
     },
     {
       id: 9,
@@ -82,6 +99,25 @@ const GetUserInfo = {
       option: "deck",
       trade_type: "sale",
       status: "completed",
+      rarity: "",
+    },
+    {
+      id: 10,
+      title: "격류장",
+      content: "",
+      option: "single",
+      trade_type: "sale",
+      status: "in_progress",
+      rarity: "ultra",
+    },
+    {
+      id: 11,
+      title: "날개 크리보",
+      content: "",
+      option: "single",
+      trade_type: "sale",
+      status: "completed",
+      rarity: "rare",
     },
   ],
 };

@@ -5,14 +5,25 @@ const Mytrade = ({ trade, userInfo, setUserInfo }) => {
   return (
     <>
       <div className="trade-box">
-        <div className="trade-title">{trade.title}</div>
-        <div className="trade-option">
-          {trade.option === "single" ? (
-            <div className="trade-option-single">낱장</div>
-          ) : (
-            <div className="trade-option-deck">덱</div>
-          )}
-        </div>
+        {trade === "single" ? (
+          <>
+            <div className="trade-title">낱장</div>
+            <div className="trade-option">
+              <div className="trade-option-single">낱장</div>
+            </div>
+          </>
+        ) : (
+          <>
+            <div className="trade-title">{trade.title}</div>
+            <div className="trade-option">
+              {trade.option === "single" ? (
+                <div className="trade-option-single">낱장</div>
+              ) : (
+                <div className="trade-option-deck">덱</div>
+              )}
+            </div>
+          </>
+        )}
       </div>
     </>
   );
