@@ -19,7 +19,7 @@ const GetUserInfo = {
     // status: 'in_progress' or 'completed'
     // rarity: 'anything' or 'normal' or 'normal_rare' or 'super_rare' or 'ultra_rare' or
     //         'ultimate_rare' or 'secret_rare' or 'holographic_rare' or ...
-    //
+    // date: "xxxx-xx-xx"
     {
       id: 1,
       title: "증식의 G",
@@ -29,6 +29,7 @@ const GetUserInfo = {
       status: "in_progress",
       rarity: "anything",
       price: 3000,
+      date: "2025-01-01",
     },
     {
       id: 2,
@@ -39,6 +40,7 @@ const GetUserInfo = {
       status: "in_progress",
       rarity: "",
       price: 100000,
+      date: "2025-01-07",
     },
     {
       id: 3,
@@ -49,6 +51,7 @@ const GetUserInfo = {
       status: "in_progress",
       rarity: "",
       price: 50000,
+      date: "2025-01-11",
     },
     {
       id: 4,
@@ -59,6 +62,7 @@ const GetUserInfo = {
       status: "in_progress",
       rarity: "",
       price: 20000,
+      date: "2025-01-12",
     },
     {
       id: 5,
@@ -69,6 +73,7 @@ const GetUserInfo = {
       status: "in_progress",
       rarity: "",
       price: 130000,
+      date: "2025-01-20",
       deck_list: [
         {
           id: 1,
@@ -89,13 +94,14 @@ const GetUserInfo = {
     },
     {
       id: 6,
-      title: "메멘토 덱 팝니다.",
+      title: "개같은 덱 팝니다.",
       content: "",
       option: "deck",
       trade_type: "sale",
       status: "in_progress",
       rarity: "",
       price: 80000,
+      date: "2025-01-08",
     },
     {
       id: 7,
@@ -106,6 +112,7 @@ const GetUserInfo = {
       status: "completed",
       rarity: "",
       price: 75000,
+      date: "2025-01-12",
     },
     {
       id: 8,
@@ -116,6 +123,7 @@ const GetUserInfo = {
       status: "completed",
       rarity: "",
       price: 2000,
+      date: "2025-01-14",
     },
     {
       id: 9,
@@ -126,6 +134,7 @@ const GetUserInfo = {
       status: "completed",
       rarity: "",
       price: 15000,
+      date: "2025-01-03",
     },
     {
       id: 10,
@@ -136,6 +145,7 @@ const GetUserInfo = {
       status: "in_progress",
       rarity: "ultra",
       price: 500,
+      date: "2025-01-09",
     },
     {
       id: 11,
@@ -146,6 +156,7 @@ const GetUserInfo = {
       status: "completed",
       rarity: "rare",
       price: 1500,
+      date: "2025-01-01",
     },
   ],
 };

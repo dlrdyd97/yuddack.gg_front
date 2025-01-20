@@ -61,7 +61,7 @@ const Profile = () => {
               ).length !== 0 ? ( // 판매중인 낱장 카드가 있으면
                 <>
                   <MyTrade
-                    trade={"single"}
+                    trade={"bundle"}
                     userInfo={userInfo}
                     setUserInfo={setUserInfo}
                   />
