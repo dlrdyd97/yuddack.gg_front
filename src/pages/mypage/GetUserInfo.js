@@ -28,6 +28,7 @@ const GetUserInfo = {
       trade_type: "purchase",
       status: "in_progress",
       rarity: "anything",
+      price: 3000,
     },
     {
       id: 2,
@@ -37,6 +38,7 @@ const GetUserInfo = {
       trade_type: "purchase",
       status: "in_progress",
       rarity: "",
+      price: 100000,
     },
     {
       id: 3,
@@ -46,6 +48,7 @@ const GetUserInfo = {
       trade_type: "purchase",
       status: "in_progress",
       rarity: "",
+      price: 50000,
     },
     {
       id: 4,
@@ -55,6 +58,7 @@ const GetUserInfo = {
       trade_type: "purchase",
       status: "in_progress",
       rarity: "",
+      price: 20000,
     },
     {
       id: 5,
@@ -64,6 +68,7 @@ const GetUserInfo = {
       trade_type: "sale",
       status: "in_progress",
       rarity: "",
+      price: 130000,
       deck_list: [
         {
           id: 1,
@@ -90,6 +95,7 @@ const GetUserInfo = {
       trade_type: "sale",
       status: "in_progress",
       rarity: "",
+      price: 80000,
     },
     {
       id: 7,
@@ -99,6 +105,7 @@ const GetUserInfo = {
       trade_type: "purchase",
       status: "completed",
       rarity: "",
+      price: 75000,
     },
     {
       id: 8,
@@ -108,6 +115,7 @@ const GetUserInfo = {
       trade_type: "purchase",
       status: "completed",
       rarity: "",
+      price: 2000,
     },
     {
       id: 9,
@@ -117,6 +125,7 @@ const GetUserInfo = {
       trade_type: "sale",
       status: "completed",
       rarity: "",
+      price: 15000,
     },
     {
       id: 10,
@@ -126,6 +135,7 @@ const GetUserInfo = {
       trade_type: "sale",
       status: "in_progress",
       rarity: "ultra",
+      price: 500,
     },
     {
       id: 11,
@@ -135,6 +145,7 @@ const GetUserInfo = {
       trade_type: "sale",
       status: "completed",
       rarity: "rare",
+      price: 1500,
     },
   ],
 };

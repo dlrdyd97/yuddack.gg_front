@@ -15,6 +15,7 @@ const Mytrade = ({ trade, userInfo, setUserInfo }) => {
         ) : (
           <>
             <div className="trade-title">{trade.title}</div>
+            <div className="trade-price"></div>
             <div className="trade-option">
               {trade.option === "single" ? (
                 <div className="trade-option-single">낱장</div>
