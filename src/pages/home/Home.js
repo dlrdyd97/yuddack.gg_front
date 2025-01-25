@@ -1,13 +1,13 @@
-import { useNavigate } from 'react-router';
+import { useNavigate } from "react-router";
 
 function Home() {
+  const navigate = useNavigate();
 
-    const navigate = useNavigate();
-    
   return (
     <>
-        <div onClick={() => navigate('/mypage/profile')}>마이페이지</div>
-        <div onClick={() => navigate('/result')}>검색결과</div>
+      <div onClick={() => navigate("/mypage/profile")}>마이페이지</div>
+      <div onClick={() => navigate("/result")}>검색결과</div>
+      <div onClick={() => navigate("/registerCard")}>등록</div>
     </>
   );
 }
