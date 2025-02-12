@@ -88,18 +88,18 @@
     border: #A3A5A9 1px solid;
     border-radius: 20px;
     background: white;
-    height: 25px;
+    height: 32px;
   }
 
-  .result-filtering-each, .result-filtering-deck {
+  .result-filtering-each, .result-filtering-deck, .result-filtering-select {
     display: flex;
     margin: 0 10px;
     align-items: center;
   }
 
-  .result-filtering-each  p, .result-filtering-deck p {
+  .result-filtering-each  p, .result-filtering-deck p, .result-filtering-select p {
     margin: 0;
-    font-size: 14px;
+    font-size: 13px;
   }
 
   .result-header {
