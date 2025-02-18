@@ -2,7 +2,7 @@
   width: 1000px;
   margin: 0 auto; 
   font-family: Arial, sans-serif; /* 글꼴 */
-  padding: 30px;
+  padding: 100px;
 }
 
 .profile-post-box{
@@ -72,3 +72,4 @@
   background: #A4A4A4; /* Scrollbar track (background) color */
   border-radius: 2px;  /* Rounded track */
 }
+
