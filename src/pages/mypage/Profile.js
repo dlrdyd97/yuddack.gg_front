@@ -52,30 +52,12 @@ const Profile = () => {
               count={userInfo.sale_posts}
             />
             <div className="scroll-box">
-              {/* 낱장 판매중 */}
-              {userInfo.trade.filter(
-                (tradeItem) =>
-                  tradeItem.trade_type === "sale" &&
-                  tradeItem.option === "single" &&
-                  tradeItem.status === "in_progress"
-              ).length !== 0 ? ( // 판매중인 낱장 카드가 있으면
-                <>
-                  <MyTrade
-                    trade={"bundle"}
-                    userInfo={userInfo}
-                    setUserInfo={setUserInfo}
-                  />
-                </>
-              ) : (
-                <></>
-              )}
               {/* 덱 판매중 */}
               {userInfo.trade
                 .filter(
                   (tradeItem) =>
-                    tradeItem.trade_type === "sale" && // 판매
-                    tradeItem.status === "in_progress" && // 판매중
-                    tradeItem.option !== "single" // 낱장이 아닌 판매카드  ( 낱장,묶어팔기는 상단 고정 )
+                    tradeItem.trade_type === "sale" &&
+                    tradeItem.status === "in_progress"
                 )
                 .map((tradeItem) => (
                   <MyTrade

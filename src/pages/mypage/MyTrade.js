@@ -13,29 +13,47 @@ const Mytrade = ({ trade, userInfo, setUserInfo }) => {
   return (
     <>
       <div className="trade-box">
-        {trade === "bundle" ? (
-          <>
-            <div className="trade-title-bundle">낱장</div>
-            <div className="trade-option-bundle">
-              <div className="trade-option-single-bundle">낱장</div>
-            </div>
-          </>
-        ) : (
-          <>
-            <div className="trade-title">{trade.title}</div>
-            <div className="trade-price">
-              {new Intl.NumberFormat("ko-KR").format(trade.price)} 원
-            </div>
-            <div className="trade-option">
-              {trade.option === "single" ? (
+        <>
+          {trade.option === "single" ? (
+            <>
+              <div className="trade-top">{trade.title}</div>
+              <div className="trade-bottom">
+                {/* 특수문자 '[ ]' 가 문자보다 아래 출력되는 현상이 있어서 style 추가 */}
+                <span className="trade-special-char">[</span>
+                <span>{trade.quantity}장</span>
+                <span className="trade-special-char">]&nbsp;</span>
+                <span>
+                  개당 {new Intl.NumberFormat("ko-KR").format(trade.price)}
+                  원&nbsp;
+                </span>
+                {trade.rarity === "" || trade.rarity === "상관없음" ? (
+                  <></>
+                ) : (
+                  <>
+                    <span className="trade-extraOptions">{trade.rarity}</span>
+                  </>
+                )}
+              </div>
+              <div className="trade-option">
                 <div className="trade-option-single">낱장</div>
-              ) : (
+              </div>
+            </>
+          ) : (
+            <>
+              <div className="trade-top">{trade.title}</div>
+              <div className="trade-bottom">
+                <span>
+                  {new Intl.NumberFormat("ko-KR").format(trade.price)}원
+                </span>
+              </div>
+              <div className="trade-option">
                 <div className="trade-option-deck">덱</div>
-              )}
-            </div>
-            <div className="trade-date">{getDaysAgo(trade.date)}일 전</div>
-          </>
-        )}
+              </div>
+            </>
+          )}
+
+          <div className="trade-date">{getDaysAgo(trade.date)}일 전</div>
+        </>
       </div>
     </>
   );

@@ -3,7 +3,7 @@
     align-items: center;
 
     width: 370px;
-    height: 60px;
+    height: 65px;
     border: 2px solid #b8b6b6;
     border-radius: 5px;
     background-color: #F2F2F2;
@@ -23,60 +23,53 @@
     border-color: #A1A1A1;     /* 호버 시 테두리 색 변경 */
 }
 
-.trade-title-bundle{
-    width: 300px;
+.trade-top{
+    max-width: 300px;
     text-align: left;
-    display: -webkit-box;
-    -webkit-box-orient: vertical; /* 세로로 정렬 */
-    -webkit-line-clamp: 1;        /* 1줄까지만 보여주고, 나머지는 ...으로 숨김 */
-    overflow: hidden;             /* 넘치는 텍스트 숨김 */
-    text-overflow: ellipsis;      /* ...으로 표시 */
-
-    font-size: 15px;
-    margin-left: 10px;
-}
-
-.trade-title{
-    width: 300px;
-    text-align: left;
-    display: -webkit-box;
-    -webkit-box-orient: vertical; /* 세로로 정렬 */
-    -webkit-line-clamp: 1;        /* 1줄까지만 보여주고, 나머지는 ...으로 숨김 */
-    overflow: hidden;             /* 넘치는 텍스트 숨김 */
-    text-overflow: ellipsis;      /* ...으로 표시 */
+    white-space: nowrap; /* 한 줄로 표시 */
+    overflow: hidden;    /* 넘친 텍스트 숨기기 */
+    text-overflow: ellipsis; /* 초과 텍스트를 ...으로 표시 */
 
     font-size: 15px;
     margin-bottom: 20px;
     margin-left: 10px;
 }
 
-.trade-price{
+.trade-bottom{
     position: absolute;
+    left: 11px;
+    top: 38px;
+    font-size: 14px;
+}
+
+.trade-quantity{
+    width: auto;
+    /* background-color: aquamarine; */
+    font-size: 15px;
+    /* margin-bottom: 20px; */
+    /* margin-left: 10px; */
+    
+}
+
+.trade-price{
+    /* position: absolute; */
     text-align: left;
-    left: 12px;
-    top: 33px;
+    /* left: 11px; */
+    /* top: 38px; */
     font-size: 14px;
 }
 
 .trade-option{
-    width: 40px;
-    margin-bottom: 20px;
-    text-align: right;
+    position: absolute;
+    width: auto;
+    right: 20px;
+    top: 13px;
+
     font-weight: 600;
+    font-size: 15px;
 }
 
 .trade-option-single{
-    color: rgb(242, 94, 98);
-}
-
-.trade-option-bundle{
-    width: 40px;
-    /* margin-bottom: 20px; */
-    text-align: right;
-    font-weight: 600;
-}
-
-.trade-option-single-bundle{
     color: rgb(242, 94, 98);
 }
 
@@ -86,8 +79,17 @@
 
 .trade-date{
     position: absolute;
-    right: 20px;
-    top: 33px;
+    right: 21px;
+    top: 38px;
     font-size: 14px;
-    /* background-color: aquamarine; */
+}
+
+.trade-special-char {
+    vertical-align: 1px; /* 원하는 값으로 조절 */
+}
+
+.trade-extraOptions{
+    background-color: #A9F5A9;
+    padding: 2px;
+    border-radius: 5px;
 }
