@@ -6,6 +6,7 @@ import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
 import "./styles/global/main.css";
 import RegisterCard from "./pages/register/RegisterCard";
+import RegisterDeck from "./pages/register/RegisterDeck";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/mypage/profile" element={<Profile />} />
           <Route path="/result" element={<Result />} />
           <Route path="/registerCard" element={<RegisterCard />} />
+          <Route path="/registerDeck" element={<RegisterDeck />} />
         </Routes>
       </main>
       <Footer />
