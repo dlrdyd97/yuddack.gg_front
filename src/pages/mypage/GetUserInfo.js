@@ -5,9 +5,9 @@ const GetUserInfo = {
   trade_count: 13,
   report_count: 0,
   purchase_posts: 4, // 백 단에서 작업
-  sale_posts: 2, // 백 단에서 작업
-  completed_purchase_posts: 3, // 백 단에서 작업
-  completed_sale_posts: 1, // 백 단에서 작업
+  sale_posts: 3, // 백 단에서 작업
+  completed_purchase_posts: 2, // 백 단에서 작업
+  completed_sale_posts: 2, // 백 단에서 작업
   profile_picture: `${process.env.PUBLIC_URL}/images/WildSoul.png`,
 
   trade: [

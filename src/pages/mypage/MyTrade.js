@@ -29,9 +29,6 @@ const Mytrade = ({ trade, userInfo, setUserInfo }) => {
                 원&nbsp;
               </span>
             </div>
-            <div className="trade-option">
-              <div className="trade-option-single">낱장</div>
-            </div>
           </>
         ) : (
           <>
@@ -40,17 +37,24 @@ const Mytrade = ({ trade, userInfo, setUserInfo }) => {
                 {new Intl.NumberFormat("ko-KR").format(trade.price)}원
               </span>
             </div>
-            <div className="trade-option">
-              <div className="trade-option-deck">덱</div>
-            </div>
           </>
         )}
         {/* 부가 옵션 */}
         <div className="trade-extraOptions-box">
+          {/* 덱 , 낱장 */}
+          {trade.option === "deck" ? (
+            <>
+              <span className="trade-extraOptions-impossible">덱</span>
+            </>
+          ) : (
+            <>
+              <span className="trade-extraOptions-impossible">낱장</span>
+            </>
+          )}
           {/* 흥정 여부 */}
           {trade.negotiable === 1 ? (
             <>
-              <span className="trade-extraOptions-possible">흥정 가능</span>
+              <span className="trade-extraOptions-impossible">흥정 가능</span>
             </>
           ) : (
             <>
@@ -65,6 +69,17 @@ const Mytrade = ({ trade, userInfo, setUserInfo }) => {
               <span className="trade-extraOptions-rarity">{trade.rarity}</span>
             </>
           )}
+        </div>
+        {/* 작성자 프로필 */}
+        <div className="trade-writer">
+          <div className="trate-writer-name">함형우</div>
+          <div className="trade-writer-img-container">
+            <img
+              src={`${process.env.PUBLIC_URL}/images/함가놈.png`}
+              alt="Profile"
+              className="trade-writer-img"
+            />
+          </div>
         </div>
         {/*  몇 분 , 몇  시간 , 며칠 전 수정 */}
         <div className="trade-date">{getDaysAgo(trade.date)}일 전</div>

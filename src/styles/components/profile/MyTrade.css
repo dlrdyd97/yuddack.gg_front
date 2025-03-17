@@ -73,31 +73,6 @@
     font-size: 14px;
 }
 
-.trade-option{
-    position: absolute;
-    width: auto;
-    right: 20px;
-    top: 5px;
-
-    font-weight: 600;
-    font-size: 15px;
-}
-
-.trade-option-single{
-    color: rgb(242, 94, 98);
-}
-
-.trade-option-deck{
-    color: rgb(51, 164, 116);
-}
-
-.trade-date{
-    position: absolute;
-    right: 21px;
-    top: 30px;
-    font-size: 14px;
-}
-
 .trade-special-char {
     vertical-align: 1px; /* 원하는 값으로 조절 */
 }
@@ -126,6 +101,45 @@
     padding: 2px;
     border-radius: 5px;
     margin-left: 5px;
+}
+
+.trade-writer{
+    display: flex;
+
+    position: absolute;
+    right: 15px;
+    top: 7px;
+    font-size: 14px;
+    align-items: center; /* 글자와 원을 수직 중앙 정렬 */
+}
+
+.trate-writer-name{
+    margin-right: 3px;
+}
+
+.trade-writer-img-container{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: aquamarine;
+    text-align: center; /* 내부 텍스트 정렬 */
+    display: flex; 
+    align-items: center; /* 내부 텍스트 중앙 정렬 */
+    justify-content: center;
+}
+
+.trade-writer-img{
+    border-radius: 50%;
+    width: 100%;  /* 부모 div의 크기에 맞게 이미지 크기 설정 */
+    height: 100%; /* 부모 div의 크기에 맞게 이미지 크기 설정 */
+    object-fit: cover;  /* 이미지가 영역을 벗어나지 않도록 비율에 맞게 잘림 */
+}
+
+.trade-date{
+    position: absolute;
+    right: 15px;
+    top: 30px;
+    font-size: 14px;
 }
 
 .trade-comment{
