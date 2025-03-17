@@ -11,8 +11,8 @@ import RegisterDeck from "./pages/register/RegisterDeck";
 function App() {
   return (
     <div>
-      <Header />
-      <main>
+      <Header/> 
+      <main style={{ paddingTop: '50px'}}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/mypage/profile" element={<Profile />} />
