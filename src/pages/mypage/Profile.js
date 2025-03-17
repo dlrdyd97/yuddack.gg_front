@@ -5,16 +5,22 @@ import MyTrade from "./MyTrade";
 import PurchaseBox from "./PurchaseBox";
 import SaleBox from "./SaleBox";
 import GetUserInfo from "./GetUserInfo";
+import BringUp from "./BringUp";
 
-function Profile() {
+const Profile = () => {
   const [userInfo, setUserInfo] = useState(GetUserInfo);
 
   return (
     <>
       <div className="profile-main">
         <MyProfile userInfo={userInfo} setUserInfo={setUserInfo} />
-        {/* 구매 , 판매중인 딱지 리스트 */}
+
+        {/* 구매중인 딱지 리스트 */}
         <div className="profile-post-box">
+          {/* 끌어올리기 */}
+          <div className="profile-bring-up">
+            <BringUp />
+          </div>
           <div className="profile-trade-box">
             <PurchaseBox
               userInfo={userInfo}
@@ -38,6 +44,7 @@ function Profile() {
                 ))}
             </div>
           </div>
+          {/* 판매중인 딱지 리스트 */}
           <div className="profile-trade-box">
             <SaleBox
               userInfo={userInfo}
@@ -45,12 +52,13 @@ function Profile() {
               count={userInfo.sale_posts}
             />
             <div className="scroll-box">
+              {/* 덱 판매중 */}
               {userInfo.trade
                 .filter(
                   (tradeItem) =>
                     tradeItem.trade_type === "sale" &&
                     tradeItem.status === "in_progress"
-                ) // "sale"인 항목 + "in_progress" 필터링
+                )
                 .map((tradeItem) => (
                   <MyTrade
                     key={tradeItem.id}
@@ -114,6 +122,6 @@ function Profile() {
       </div>
     </>
   );
-}
+};
 
 export default Profile;
